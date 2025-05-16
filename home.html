@@ -1,20 +1,3 @@
-<?php
-// Tangkap IP
-$ip = $_SERVER['REMOTE_ADDR'];
-
-// Tangkap User-Agent (informasi perangkat & browser)
-$userAgent = $_SERVER['HTTP_USER_AGENT'];
-
-// Waktu akses
-$time = date("Y-m-d H:i:s");
-
-// Format log
-$log = "$time - IP: $ip - Agent: $userAgent\n";
-
-// Simpan ke file log
-file_put_contents("visitor_log.txt", $log, FILE_APPEND);
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
