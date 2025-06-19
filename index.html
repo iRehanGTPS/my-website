@@ -1,110 +1,71 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selamat Datang di Website Rehan😎</title>
+  <title>CANT DOWN</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #74ebd5, #ACB6E5);
-      color: #333;
-      text-align: center;
-      padding: 50px 20px;
       margin: 0;
+      background: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    .container {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 40px 30px;
-      max-width: 500px;
-      margin: auto;
+    .glitch {
+      font-size: 4em;
+      position: relative;
+      animation: flicker 2s infinite alternate;
     }
 
-    h2 {
-      color: #222;
-      font-size: 2rem;
-      margin-bottom: 10px;
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
     }
 
-    p {
-      font-size: 1rem;
-      margin: 10px 0;
+    .glitch::before {
+      top: -2px;
+      color: red;
+      animation: glitchTop 1s infinite linear alternate-reverse;
     }
 
-    #status {
-      font-size: 1.2rem;
-      margin-top: 20px;
+    .glitch::after {
+      top: 2px;
+      color: blue;
+      animation: glitchBottom 1.5s infinite linear alternate-reverse;
     }
 
-    .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 20px auto;
+    @keyframes glitchTop {
+      0% { clip-path: inset(0 0 90% 0); }
+      50% { clip-path: inset(0 0 40% 0); }
+      100% { clip-path: inset(0 0 60% 0); }
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes glitchBottom {
+      0% { clip-path: inset(80% 0 0 0); }
+      50% { clip-path: inset(20% 0 0 0); }
+      100% { clip-path: inset(40% 0 0 0); }
     }
 
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.2;
+      }
     }
-    
-    .btn {
-      display: none;
-      background-color: #3498db;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      margin-top: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #2980b9;
-      transform: scale(1.05);
-    }
-
-
   </style>
 </head>
 <body>
-  <div class="wrapper">
-      <!-- Foto profil -->
-      <img src="33.jpg" alt="HEHE" class="profile-img">
-      
-  <div class="container">
-    <h2>Halo, Bisa DOWN? 👋</h2>
-    <p>CANT DOWN</p>
-    <div class="loader" id="loader"></div>
-    <p id="status">CANT DOWN</p>
-    <a href="cant down" class="btn" id="enterBtn">DOWN??</a>
-  </div>
-
-  <script>
-    // Setelah 3 detik, ubah status & tampilkan tombol
-    setTimeout(function() {
-      document.getElementById("status").textContent = "DOWNNNN??";
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("enterBtn").style.display = "inline-block";
-    }, 3000);
-  </script>
+  <div class="glitch" data-text="CANT DOWN">CANT DOWN</div>
 </body>
 </html>
