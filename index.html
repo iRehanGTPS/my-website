@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang di Website Johen😎</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #222;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    #status {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .btn {
+      display: none;
+      background-color: #3498db;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      margin-top: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+      <!-- Foto profil -->
+      <img src="index.jpg" alt="Foto Index" class="profile-img">
+      
+  <div class="container">
+    <h2>Halo, ini Website Johen 👋</h2>
+    <p>Tunggu Sebentar</p>
+    <div class="loader" id="loader"></div>
+    <p id="status">Wait...</p>
+    <a href="home.html" class="btn" id="enterBtn">Click.</a>
+  </div>
+
+  <script>
+    // Setelah 3 detik, ubah status & tampilkan tombol
+    setTimeout(function() {
+      document.getElementById("status").textContent = "Home Siap.";
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("enterBtn").style.display = "inline-block";
+    }, 3000);
+  </script>
+</body>
+</html>
