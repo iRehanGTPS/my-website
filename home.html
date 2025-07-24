@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page Johen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -47,35 +48,33 @@
       line-height: 1.6;
     }
 
-    .vertical-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  margin-top: 30px;
-}
+    .rgb-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #ff0066, #6e00ff, #00f7ff);
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 0 12px #00f7ff;
+      animation: rgbglow 4s linear infinite;
+      transition: transform 0.3s ease;
+      margin-top: 15px;
+    }
 
-.square-btn {
-  width: 180px;
-  height: 60px;
-  background-color: #000000;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s ease;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-}
+    .rgb-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #fff;
+    }
 
-.square-btn:hover {
-  background-color: #f90000;
-  transform: scale(1.05);
-}
-
+    @keyframes rgbglow {
+      0% { box-shadow: 0 0 10px #ff0066; }
+      33% { box-shadow: 0 0 10px #6e00ff; }
+      66% { box-shadow: 0 0 10px #00f7ff; }
+      100% { box-shadow: 0 0 10px #ff0066; }
+    }
 
     @media (max-width: 600px) {
       .profile-img {
@@ -90,89 +89,29 @@
       .intro-text {
         font-size: 0.95rem;
       }
+
+      .rgb-btn {
+        font-size: 18px;
+        padding: 12px 20px;
+      }
     }
-
-    .footer {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px 0;
-  background-color: #f1f1f1;
-}
-
-.wa-link {
-  font-size: 20px;
-  color: #25D366; /* warna khas WhatsApp */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.wa-link i {
-  margin-right: 8px;
-}
-
-
-.social-footer {
-  text-decoration: none;
-  color: #E1306C;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.social-footer i {
-  margin-right: 8px;
-}
-
-.social-footer:hover {
-  color: #c6285f;
-}
-
-.social-link:hover {
-  background-color: #c6285f;
-  transform: scale(1.05);
-}
-
-.social-link i {
-  margin-right: 8px;
-}
   </style>
 </head>
 <body>
   <div class="wrapper">
     <!-- Foto profil -->
-    <img src="index.png" alt="Foto C2" class="profile-img">
+    <img src="index.png" alt="Foto Johen" class="profile-img">
     
     <!-- Judul -->
     <h1>Welcome to Home Page Johen 👋😊</h1>
 
-   <!-- Teks sambutan -->
-<p class="intro-text">
-  Halo, saya Johen! 👨‍💻🚀<br>
-  <a href="ddos.html" style="
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 24px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #00ff00;
-  background: transparent;
-  border: 2px solid #00ff00;
-  border-radius: 8px;
-  text-decoration: none;
-  text-shadow: 0 0 10px #00ff00;
-  transition: all 0.3s ease;
-">
-🔥 Lihat Serangan Johen
-</a>
-</p>
+    <!-- Teks sambutan -->
+    <p class="intro-text">
+      Halo, saya Johen! 👨‍💻🚀
+    </p>
 
-  <head>
-    <!-- Tambahkan ini di dalam <head> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </head>
-    </div>
-    </body>
+    <!-- Tombol RGB besar -->
+    <a href="ddos.html" class="rgb-btn">🔥 Lihat Serangan Johen</a>
   </div>
 </body>
 </html>
-
