@@ -1,140 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Down by Johen</title>
   <style>
     body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Arial', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: monospace;
-      margin: 0;
-      padding: 0;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.98); }
-      to { opacity: 1; transform: scale(1); }
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 2em;
-      color: #c71585;
-      text-shadow: 0 0 15px #ff1493, 0 0 25px #9400d3;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 0 auto 40px;
     }
 
-    .card {
-      background: #111;
-      border: 2px solid #00bfff;
-      border-radius: 12px;
-      padding: 10px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .gallery a {
+      display: block;
+      transition: transform 0.3s ease;
     }
 
-    .card:hover {
+    .gallery a:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #ff0080;
-      border-color: #ff0080;
     }
 
-    .card img {
+    .gallery img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      border: 1px solid #444;
-      cursor: pointer;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(255,0,128,0.3);
     }
 
-    .card p {
-      margin-top: 8px;
+    .btn-home {
+      display: inline-block;
+      padding: 10px 22px;
+      font-size: 1rem;
       font-weight: bold;
-      color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff;
-    }
-
-    /* Lightbox modal */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border: 3px solid #ff00ff;
+      color: white;
+      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
+      border: none;
       border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px rgba(255,0,128,0.3);
     }
 
-    .lightbox:target {
-      display: flex;
+    .btn-home:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,0,128,0.5);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn-home {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Website Down by Johen</h1>
+  <h1>🔥List Website Down</h1>
+
   <div class="gallery">
-    <!-- Repeat for each image -->
-    <div class="card">
-      <a href="#udp"><img src="udp.png" alt="UDP"></a>
-      <p>UDP</p>
-    </div>
-    <div class="card">
-      <a href="#tcp"><img src="tcp.png" alt="TCP"></a>
-      <p>TCP</p>
-    </div>
-    <div class="card">
-      <a href="#kominfo"><img src="kominfo.png" alt="Kominfo"></a>
-      <p>Kominfo</p>
-    </div>
-    <div class="card">
-      <a href="#domainesia"><img src="domainesia.png" alt="DomaiNesia"></a>
-      <p>DomaiNesia</p>
-    </div>
-    <div class="card">
-      <a href="#dpr"><img src="dpr.png" alt="DPR"></a>
-      <p>DPR</p>
-    </div>
-    <div class="card">
-      <a href="#growtopia"><img src="growtopia.png" alt="Growtopia"></a>
-      <p>Growtopia</p>
-    </div>
-    <div class="card">
-      <a href="#skynet"><img src="skynet.png" alt="Skynet"></a>
-      <p>Skynet</p>
-    </div>
-    <div class="card">
-      <a href="#cheapwl"><img src="cheapwl.png" alt="CheapWL"></a>
-      <p>CheapWL</p>
-    </div>
+    <a href="udp.png" target="_blank"><img src="udp.png" alt="UDP"></a>
+    <a href="tcp.png" target="_blank"><img src="tcp.png" alt="TCP"></a>
+    <a href="kominfo.png" target="_blank"><img src="kominfo.png" alt="Kominfo"></a>
+    <a href="domainesia.png" target="_blank"><img src="domainesia.png" alt="Domainesia"></a>
+    <a href="dpr.png" target="_blank"><img src="dpr.png" alt="DPR"></a>
+    <a href="growtopia.png" target="_blank"><img src="growtopia.png" alt="Growtopia"></a>
+    <a href="skynet.png" target="_blank"><img src="skynet.png" alt="Skynet"></a>
+    <a href="cheapwl.png" target="_blank"><img src="cheapwl.png" alt="CheapWL"></a>
   </div>
 
-  <!-- Lightbox modals -->
-  <div id="udp" class="lightbox"><a href="#"><img src="udp.png" alt=""></a></div>
-  <div id="tcp" class="lightbox"><a href="#"><img src="tcp.png" alt=""></a></div>
-  <div id="kominfo" class="lightbox"><a href="#"><img src="kominfo.png" alt=""></a></div>
-  <div id="domainesia" class="lightbox"><a href="#"><img src="domainesia.png" alt=""></a></div>
-  <div id="dpr" class="lightbox"><a href="#"><img src="dpr.png" alt=""></a></div>
-  <div id="growtopia" class="lightbox"><a href="#"><img src="growtopia.png" alt=""></a></div>
-  <div id="skynet" class="lightbox"><a href="#"><img src="skynet.png" alt=""></a></div>
-  <div id="cheapwl" class="lightbox"><a href="#"><img src="cheapwl.png" alt=""></a></div>
+  <a href="index.html" class="btn-home">⬅️ Kembali ke Home Page</a>
 </body>
 </html>
