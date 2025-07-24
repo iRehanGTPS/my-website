@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DDoS - Website Down by Johen</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2em;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ff00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Down by Johen</h1>
+  <div class="gallery">
+    <img src="img/udp.png" alt="UDP">
+    <img src="img/tcp.png" alt="TCP">
+    <img src="img/kominfo.png" alt="Kominfo">
+    <img src="img/domainesia.png" alt="DomaiNesia">
+    <img src="img/dpr.png" alt="DPR">
+    <img src="img/growtopia.png" alt="Growtopia">
+    <img src="img/skynet.png" alt="Skynet">
+    <img src="img/cheapwl.png" alt="CheapWL">
+  </div>
+</body>
+</html>
