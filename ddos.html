@@ -1,131 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serangan Johen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔥 Show DDoS</title>
   <style>
     body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: 'Arial', sans-serif;
       background-color: #000;
       color: #fff;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
+      padding: 40px 20px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 30px;
-      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
+      background: linear-gradient(90deg, #ff00cc, #00ccff, #ff6600);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    .list-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .item {
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #00ccff, #ff00cc, #ff6600);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
-      margin: 0 auto 40px;
-    }
-
-    .gallery-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .gallery-item a {
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item a:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(255,0,128,0.3);
-    }
-
     .caption {
-      margin-top: 8px;
+      margin-top: 20px;
       font-size: 0.95rem;
-      color: #ccc;
+      background: linear-gradient(90deg, #ff00cc, #00ffff, #ff6600);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
     }
 
-    .btn-home {
+    a.back {
       display: inline-block;
+      margin-top: 35px;
       padding: 10px 22px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: white;
-      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
-      border: none;
-      border-radius: 10px;
       text-decoration: none;
-      transition: 0.3s ease;
-      box-shadow: 0 0 12px rgba(255,0,128,0.3);
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff00cc, #00ccff, #ff6600);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: 1px solid #333;
+      border-radius: 10px;
     }
 
-    .btn-home:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255,0,128,0.5);
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .btn-home {
-        font-size: 0.95rem;
-      }
+    a.back:hover {
+      text-shadow: 0 0 10px #ff00cc;
     }
   </style>
 </head>
 <body>
+
   <h1>🔥 Halaman Serangan Aktif</h1>
 
-  <div class="gallery">
-    <div class="gallery-item">
-      <a href="udp.png" target="_blank"><img src="udp.png" alt="UDP"></a>
-      <div class="caption">UDP FLOOD</div>
-    </div>
-    <div class="gallery-item">
-      <a href="tcp.png" target="_blank"><img src="tcp.png" alt="TCP"></a>
-      <div class="caption">TCP FLOOD</div>
-    </div>
-    <div class="gallery-item">
-      <a href="kominfo.png" target="_blank"><img src="kominfo.png" alt="Kominfo"></a>
-      <div class="caption">KOMINFO</div>
-    </div>
-    <div class="gallery-item">
-      <a href="domainesia.png" target="_blank"><img src="domainesia.png" alt="Domainesia"></a>
-      <div class="caption">DOMAINESIA</div>
-    </div>
-    <div class="gallery-item">
-      <a href="dpr.png" target="_blank"><img src="dpr.png" alt="DPR"></a>
-      <div class="caption">DPR RI</div>
-    </div>
-    <div class="gallery-item">
-      <a href="growtopia.png" target="_blank"><img src="growtopia.png" alt="Growtopia"></a>
-      <div class="caption">GROWTOPIA</div>
-    </div>
-    <div class="gallery-item">
-      <a href="skynet.png" target="_blank"><img src="skynet.png" alt="Skynet"></a>
-      <div class="caption">SKYNET</div>
-    </div>
-    <div class="gallery-item">
-      <a href="cheapwl.png" target="_blank"><img src="cheapwl.png" alt="CheapWL"></a>
-      <div class="caption">CHEAP WL</div>
-    </div>
+  <div class="list-group">
+    <div class="item">UDP</div>
+    <div class="item">UDP FLOOD</div>
+    <div class="item">TCP</div>
+    <div class="item">TCP FLOOD</div>
+    <div class="item">Kominfo</div>
+    <div class="item">KOMINFO</div>
+    <div class="item">Domainesia</div>
+    <div class="item">DOMAINESIA</div>
+    <div class="item">DPR</div>
+    <div class="item">DPR RI</div>
+    <div class="item">Growtopia</div>
+    <div class="item">GROWTOPIA</div>
+    <div class="item">Skynet</div>
+    <div class="item">SKYNET</div>
+    <div class="item">CheapWL</div>
+    <div class="item">CHEAP WL</div>
   </div>
 
-  <a href="index.html" class="btn-home">⬅️ Kembali ke Beranda</a>
+  <footer>© 2025 JohenLG Network // Powered by Johen</footer>
+  <div class="caption">📡 Semua sistem telah diinterkoneksi - pantauan aktif 24/7 oleh JohenCore AI</div>
+
+  <a class="back" href="index.html">⬅️ Kembali ke Home Page</a>
+
 </body>
 </html>
