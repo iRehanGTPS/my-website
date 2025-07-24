@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Down by Johen</title>
+  <title>Serangan Johen</title>
   <style>
     body {
       margin: 0;
@@ -25,25 +25,37 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
+      gap: 25px;
       max-width: 1000px;
       margin: 0 auto 40px;
     }
 
-    .gallery a {
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-item a {
       display: block;
       transition: transform 0.3s ease;
     }
 
-    .gallery a:hover {
+    .gallery-item a:hover {
       transform: scale(1.05);
     }
 
-    .gallery img {
+    .gallery-item img {
       width: 100%;
       height: auto;
       border-radius: 14px;
       box-shadow: 0 4px 12px rgba(255,0,128,0.3);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #ccc;
     }
 
     .btn-home {
@@ -77,19 +89,43 @@
   </style>
 </head>
 <body>
-  <h1>🔥List Website Down</h1>
+  <h1>🔥 Halaman Serangan Aktif</h1>
 
   <div class="gallery">
-    <a href="udp.png" target="_blank"><img src="udp.png" alt="UDP"></a>
-    <a href="tcp.png" target="_blank"><img src="tcp.png" alt="TCP"></a>
-    <a href="kominfo.png" target="_blank"><img src="kominfo.png" alt="Kominfo"></a>
-    <a href="domainesia.png" target="_blank"><img src="domainesia.png" alt="Domainesia"></a>
-    <a href="dpr.png" target="_blank"><img src="dpr.png" alt="DPR"></a>
-    <a href="growtopia.png" target="_blank"><img src="growtopia.png" alt="Growtopia"></a>
-    <a href="skynet.png" target="_blank"><img src="skynet.png" alt="Skynet"></a>
-    <a href="cheapwl.png" target="_blank"><img src="cheapwl.png" alt="CheapWL"></a>
+    <div class="gallery-item">
+      <a href="udp.png" target="_blank"><img src="udp.png" alt="UDP"></a>
+      <div class="caption">UDP FLOOD</div>
+    </div>
+    <div class="gallery-item">
+      <a href="tcp.png" target="_blank"><img src="tcp.png" alt="TCP"></a>
+      <div class="caption">TCP FLOOD</div>
+    </div>
+    <div class="gallery-item">
+      <a href="kominfo.png" target="_blank"><img src="kominfo.png" alt="Kominfo"></a>
+      <div class="caption">KOMINFO</div>
+    </div>
+    <div class="gallery-item">
+      <a href="domainesia.png" target="_blank"><img src="domainesia.png" alt="Domainesia"></a>
+      <div class="caption">DOMAINESIA</div>
+    </div>
+    <div class="gallery-item">
+      <a href="dpr.png" target="_blank"><img src="dpr.png" alt="DPR"></a>
+      <div class="caption">DPR RI</div>
+    </div>
+    <div class="gallery-item">
+      <a href="growtopia.png" target="_blank"><img src="growtopia.png" alt="Growtopia"></a>
+      <div class="caption">GROWTOPIA</div>
+    </div>
+    <div class="gallery-item">
+      <a href="skynet.png" target="_blank"><img src="skynet.png" alt="Skynet"></a>
+      <div class="caption">SKYNET</div>
+    </div>
+    <div class="gallery-item">
+      <a href="cheapwl.png" target="_blank"><img src="cheapwl.png" alt="CheapWL"></a>
+      <div class="caption">CHEAP WL</div>
+    </div>
   </div>
 
-  <a href="index.html" class="btn-home">⬅️ Kembali ke Home Page</a>
+  <a href="index.html" class="btn-home">⬅️ Kembali ke Beranda</a>
 </body>
 </html>
