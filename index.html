@@ -3,141 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Selamat Datang di Website Johen 😎</title>
+  <title>Selamat Datang, Netrunner 👨‍💻</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
-    }
-
-    .banner {
-      width: 100%;
-      height: 55vh; /* tinggi proporsional */
-      overflow: hidden;
-    }
-
-    .banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
-    .content {
-      padding: 40px 20px 30px;
+      padding: 50px 20px;
+      margin: 0;
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #ff0066, #00ffff, #ff00cc);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ff00cc, #00ccff, #ff6600);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
     }
 
-    .subtitle {
-      font-size: 1rem;
-      margin-top: 8px;
-      margin-bottom: 30px;
-      background: linear-gradient(90deg, #00ccff, #cc00ff, #ff0066);
+    p {
+      font-size: 1.1rem;
+      margin: 15px 0;
+      background: linear-gradient(90deg, #00ccff, #ff00cc, #ff6600);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: 500;
     }
 
-    #status {
-      font-size: 1.1rem;
-      margin-top: 20px;
-      color: #ccc;
-    }
-
-    .loader {
-      border: 6px solid #111;
-      border-top: 6px solid #ff00cc;
-      border-radius: 50%;
-      width: 42px;
-      height: 42px;
-      animation: spin 1s linear infinite;
-      margin: 25px auto;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .btn {
-      display: none;
+    a.button {
+      display: inline-block;
       margin-top: 30px;
       padding: 12px 28px;
       font-size: 1rem;
       font-weight: bold;
-      color: white;
-      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
       text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 10px rgba(255,0,128,0.4);
+      color: #fff;
+      border: 2px solid #333;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #ff00cc, #00ccff, #ff6600);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease;
     }
 
-    .btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 18px rgba(255,0,128,0.6);
+    a.button:hover {
+      text-shadow: 0 0 10px #ff00cc;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.85rem;
-      color: #444;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .btn {
-        padding: 10px 22px;
-        font-size: 0.95rem;
-      }
+    .copyright {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      background: linear-gradient(90deg, #00ffff, #ff00cc, #ff6600);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   </style>
 </head>
 <body>
 
-  <div class="banner">
-    <img src="home.jpg" alt="Johen Banner">
-  </div>
+  <h1>Selamat Datang, Netrunner 👨‍💻</h1>
+  <p>JohenLG DDoS Service.<br>Sistem siap! Klik untuk lanjut.</p>
 
-  <div class="content">
-    <h1>Selamat Datang, Netrunner 👨‍💻</h1>
-    <div class="subtitle">JohenLG DDoS Service.</div>
+  <a href="ddos.html" class="button">Masuk Sekarang 🚀</a>
 
-    <div class="loader" id="loader"></div>
-    <p id="status">Wait...</p>
-    <a href="home.html" class="btn" id="enterBtn">Masuk Sekarang 🚀</a>
-  </div>
-
-  <footer>© 2025 JohenLG Network // Powered by Johen</footer>
-
-  <script>
-    setTimeout(function() {
-      document.getElementById("status").textContent = "Sistem siap! Klik untuk lanjut.";
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("enterBtn").style.display = "inline-block";
-    }, 3000);
-  </script>
+  <div class="copyright">© 2025 JohenLG Network // Powered by Johen</div>
 
 </body>
 </html>
