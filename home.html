@@ -7,72 +7,63 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #d4dad6, #0728b9);
-      color: #333;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #fff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       min-height: 100vh;
-    }
-
-    .wrapper {
-      background: #fff;
-      border-radius: 20px;
-      padding: 30px 20px;
-      max-width: 700px;
-      width: 90%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .profile-img {
-      width: 220px;
-      height: 220px;
+    img.profile-img {
+      width: 260px;
+      height: 260px;
+      border-radius: 14px;
       object-fit: cover;
-      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
       margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 10px;
+      color: #fff;
     }
 
     .intro-text {
       font-size: 1rem;
-      margin-bottom: 20px;
-      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #ccc;
     }
 
     .attack-btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 14px 28px;
-      font-size: 22px;
-      font-weight: bold;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
       color: white;
-      background: linear-gradient(45deg, rgb(128,0,128), rgb(255,0,128), rgb(255,0,0));
+      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 0 10px rgba(255,0,128,0.5);
+      box-shadow: 0 0 10px rgba(255,0,128,0.3);
     }
 
     .attack-btn:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px rgba(255,0,128,0.7);
-      filter: brightness(1.1);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,0,128,0.5);
     }
 
     @media (max-width: 600px) {
-      .profile-img {
-        width: 150px;
-        height: 150px;
+      img.profile-img {
+        width: 160px;
+        height: 160px;
       }
 
       h1 {
@@ -80,59 +71,20 @@
       }
 
       .intro-text {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
-    }
 
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 20px 0;
-      background-color: #f1f1f1;
-    }
-
-    .wa-link {
-      font-size: 20px;
-      color: #25D366;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .social-footer {
-      text-decoration: none;
-      color: #E1306C;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-footer:hover {
-      color: #c6285f;
-    }
-
-    .social-link:hover {
-      background-color: #c6285f;
-      transform: scale(1.05);
-    }
-
-    .social-link i {
-      margin-right: 8px;
+      .attack-btn {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <!-- Foto profil -->
-    <img src="index.png" alt="Foto Johen" class="profile-img">
-    
-    <!-- Judul -->
-    <h1>Welcome to Home Page Johen 👋😊</h1>
-
-    <!-- Teks sambutan dan tombol -->
-    <p class="intro-text">
-      Halo, saya Johen! 👨‍💻🚀<br>
-      <a href="ddos.html" class="attack-btn">🔥 Lihat Serangan Johen</a>
-    </p>
-  </div>
+  <img src="index.png" alt="Foto Johen" class="profile-img">
+  <h1>Welcome to Home Page Johen 👋😊</h1>
+  <p class="intro-text">Halo, saya Johen! 👨‍💻🚀</p>
+  <a href="ddos.html" class="attack-btn">🔥 Lihat Serangan Johen</a>
 </body>
 </html>
