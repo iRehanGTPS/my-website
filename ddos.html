@@ -2,62 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DDoS - Website Down by Johen</title>
+  <title>Website Down by Johen</title>
   <style>
     body {
-      margin: 0;
       background-color: #000;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      overflow-x: hidden;
-      animation: fadeIn 2s ease-in;
+      color: #fff;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1.5s ease-in;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     h1 {
       text-align: center;
       margin-top: 30px;
       font-size: 2em;
-      text-shadow: 0 0 10px #00ff00;
+      color: #c71585;
+      text-shadow: 0 0 15px #ff1493, 0 0 25px #9400d3;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      gap: 20px;
       padding: 40px;
       max-width: 1200px;
       margin: auto;
     }
 
-    .gallery img {
-      width: 100%;
-      border: 2px solid #00ff00;
-      border-radius: 10px;
+    .card {
+      background: #111;
+      border: 2px solid #00bfff;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .gallery img:hover {
+    .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #00ff00;
+      box-shadow: 0 0 15px #ff0080;
+      border-color: #ff0080;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #444;
+      cursor: pointer;
+    }
+
+    .card p {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #ff00ff;
+      text-shadow: 0 0 10px #ff00ff;
+    }
+
+    /* Lightbox modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #ff00ff;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
     }
   </style>
 </head>
 <body>
   <h1>Website Down by Johen</h1>
   <div class="gallery">
-    <img src="udp.png" alt="UDP">
-    <img src="tcp.png" alt="TCP">
-    <img src="kominfo.png" alt="Kominfo">
-    <img src="domainesia.png" alt="DomaiNesia">
-    <img src="dpr.png" alt="DPR">
-    <img src="growtopia.png" alt="Growtopia">
-    <img src="skynet.png" alt="Skynet">
-    <img src="cheapwl.png" alt="CheapWL">
+    <!-- Repeat for each image -->
+    <div class="card">
+      <a href="#udp"><img src="udp.png" alt="UDP"></a>
+      <p>UDP</p>
+    </div>
+    <div class="card">
+      <a href="#tcp"><img src="tcp.png" alt="TCP"></a>
+      <p>TCP</p>
+    </div>
+    <div class="card">
+      <a href="#kominfo"><img src="kominfo.png" alt="Kominfo"></a>
+      <p>Kominfo</p>
+    </div>
+    <div class="card">
+      <a href="#domainesia"><img src="domainesia.png" alt="DomaiNesia"></a>
+      <p>DomaiNesia</p>
+    </div>
+    <div class="card">
+      <a href="#dpr"><img src="dpr.png" alt="DPR"></a>
+      <p>DPR</p>
+    </div>
+    <div class="card">
+      <a href="#growtopia"><img src="growtopia.png" alt="Growtopia"></a>
+      <p>Growtopia</p>
+    </div>
+    <div class="card">
+      <a href="#skynet"><img src="skynet.png" alt="Skynet"></a>
+      <p>Skynet</p>
+    </div>
+    <div class="card">
+      <a href="#cheapwl"><img src="cheapwl.png" alt="CheapWL"></a>
+      <p>CheapWL</p>
+    </div>
   </div>
+
+  <!-- Lightbox modals -->
+  <div id="udp" class="lightbox"><a href="#"><img src="udp.png" alt=""></a></div>
+  <div id="tcp" class="lightbox"><a href="#"><img src="tcp.png" alt=""></a></div>
+  <div id="kominfo" class="lightbox"><a href="#"><img src="kominfo.png" alt=""></a></div>
+  <div id="domainesia" class="lightbox"><a href="#"><img src="domainesia.png" alt=""></a></div>
+  <div id="dpr" class="lightbox"><a href="#"><img src="dpr.png" alt=""></a></div>
+  <div id="growtopia" class="lightbox"><a href="#"><img src="growtopia.png" alt=""></a></div>
+  <div id="skynet" class="lightbox"><a href="#"><img src="skynet.png" alt=""></a></div>
+  <div id="cheapwl" class="lightbox"><a href="#"><img src="cheapwl.png" alt=""></a></div>
 </body>
 </html>
