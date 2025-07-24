@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selamat Datang di Website Johen😎</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Datang di Website Johen 😎</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #74ebd5, #ACB6E5);
-      color: #333;
-      text-align: center;
-      padding: 50px 20px;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .container {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 40px 30px;
-      max-width: 500px;
-      margin: auto;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 0;
     }
 
-    h2 {
-      color: #222;
-      font-size: 2rem;
+    .banner {
+      width: 100%;
+      max-height: 380px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      border-bottom: 3px solid rgba(255, 0, 128, 0.3);
+    }
+
+    .content {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
       margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1rem;
-      margin: 10px 0;
+      background: linear-gradient(90deg, rgb(128,0,255), rgb(0,255,255), rgb(255,0,128));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     #status {
-      font-size: 1.2rem;
-      margin-top: 20px;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      color: #ccc;
     }
 
     .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #3498db;
+      border: 6px solid #222;
+      border-top: 6px solid rgb(255, 0, 128);
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       animation: spin 1s linear infinite;
-      margin: 20px auto;
+      margin: 25px auto;
     }
 
     @keyframes spin {
@@ -54,56 +64,66 @@
       100% { transform: rotate(360deg); }
     }
 
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    
     .btn {
       display: none;
-      background-color: #3498db;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
       margin-top: 30px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, rgb(128,0,255), rgb(255,0,128), rgb(255,0,0));
+      border: none;
+      border-radius: 12px;
       cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(255,0,128,0.4);
     }
 
     .btn:hover {
-      background-color: #2980b9;
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 0 18px rgba(255,0,128,0.6);
     }
 
+    footer {
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #555;
+    }
 
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .btn {
+        padding: 10px 22px;
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-      <!-- Foto profil -->
-      <img src="home.jpg" alt="Foto Index" class="profile-img">
-      
-  <div class="container">
-    <h2>Hello👋</h2>
-    <div class="loader" id="loader"></div>
-    <p id="status">Wait...</p>
-    <a href="home.html" class="btn" id="enterBtn">Click.</a>
+
+  <div class="banner">
+    <img src="home.jpg" alt="Johen Banner">
   </div>
 
+  <div class="content">
+    <h1>👋 Welcome</h1>
+    <div class="loader" id="loader"></div>
+    <p id="status">Tunggu bentar ya...</p>
+    <a href="home.html" class="btn" id="enterBtn">Masuk Home Page Website 🚀</a>
+  </div>
+
+  <footer>© 2025 Johen Network</footer>
+
   <script>
-    // Setelah 3 detik, ubah status & tampilkan tombol
     setTimeout(function() {
-      document.getElementById("status").textContent = "Home Siap.";
+      document.getElementById("status").textContent = "Siap! Klik tombol di bawah.";
       document.getElementById("loader").style.display = "none";
       document.getElementById("enterBtn").style.display = "inline-block";
     }, 3000);
   </script>
+
 </body>
 </html>
