@@ -140,22 +140,21 @@
 <body>
   <div class="wrapper">
     <!-- Foto profil -->
-    <img src="home.jpg" alt="Foto C2" class="profile-img">
+    <img src="home.png" alt="Foto C2" class="profile-img">
     
     <!-- Judul -->
     <h1>Welcome to Home Page Johen 👋😊</h1>
 
-    <!-- Teks sambutan -->
-    <p class="intro-text">
-      Halo, saya Johen! 👨‍💻<br>
-      🚀
-    </p>
+   <!-- Teks sambutan -->
+<p class="intro-text">
+  Halo, saya Johen! 👨‍💻🚀<br>
+  <a href="ddos.html" style="color:#00ff00; text-decoration:none;">🔥 Lihat Serangan</a>
+</p>
 
   <head>
     <!-- Tambahkan ini di dalam <head> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
-</footer>
     </div>
     </body>
   </div>
