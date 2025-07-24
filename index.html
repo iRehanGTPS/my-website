@@ -16,42 +16,54 @@
       background-color: #000;
       color: #fff;
       text-align: center;
-      padding: 0;
     }
 
     .banner {
       width: 100%;
-      max-height: 380px;
+      height: 55vh; /* tinggi proporsional */
       overflow: hidden;
     }
 
     .banner img {
       width: 100%;
-      height: auto;
-      border-bottom: 3px solid rgba(255, 0, 128, 0.3);
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .content {
-      padding: 40px 20px;
+      padding: 40px 20px 30px;
     }
 
     h1 {
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       margin-bottom: 10px;
-      background: linear-gradient(90deg, rgb(128,0,255), rgb(0,255,255), rgb(255,0,128));
+      background: linear-gradient(90deg, #ff0066, #00ffff, #ff00cc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      margin-top: 8px;
+      margin-bottom: 30px;
+      background: linear-gradient(90deg, #00ccff, #cc00ff, #ff0066);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
     }
 
     #status {
       font-size: 1.1rem;
-      margin-top: 15px;
+      margin-top: 20px;
       color: #ccc;
     }
 
     .loader {
-      border: 6px solid #222;
-      border-top: 6px solid rgb(255, 0, 128);
+      border: 6px solid #111;
+      border-top: 6px solid #ff00cc;
       border-radius: 50%;
       width: 42px;
       height: 42px;
@@ -86,14 +98,14 @@
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 0.85rem;
-      color: #555;
+      color: #444;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
       .btn {
         padding: 10px 22px;
@@ -109,17 +121,19 @@
   </div>
 
   <div class="content">
-    <h1>👋 Welcome</h1>
+    <h1>Selamat Datang, Netrunner 👨‍💻</h1>
+    <div class="subtitle">JohenLG DDoS Service.</div>
+
     <div class="loader" id="loader"></div>
-    <p id="status">Tunggu bentar ya...</p>
-    <a href="home.html" class="btn" id="enterBtn">Masuk Home Page Website 🚀</a>
+    <p id="status">Wait...</p>
+    <a href="home.html" class="btn" id="enterBtn">Masuk Sekarang 🚀</a>
   </div>
 
-  <footer>© 2025 Johen Network</footer>
+  <footer>© 2025 JohenLG Network // Powered by Johen</footer>
 
   <script>
     setTimeout(function() {
-      document.getElementById("status").textContent = "Siap! Klik tombol di bawah.";
+      document.getElementById("status").textContent = "Sistem siap! Klik untuk lanjut.";
       document.getElementById("loader").style.display = "none";
       document.getElementById("enterBtn").style.display = "inline-block";
     }, 3000);
