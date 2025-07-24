@@ -29,10 +29,10 @@
     }
 
     .profile-img {
-      width: 150px;
-      height: 150px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 12px;
       margin-bottom: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
@@ -48,38 +48,31 @@
       line-height: 1.6;
     }
 
-    .rgb-btn {
+    .attack-btn {
       display: inline-block;
+      margin-top: 10px;
       padding: 14px 28px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
-      color: #fff;
-      background: linear-gradient(90deg, #ff0066, #6e00ff, #00f7ff);
+      color: white;
+      background: linear-gradient(45deg, rgb(128,0,128), rgb(255,0,128), rgb(255,0,0));
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 0 12px #00f7ff;
-      animation: rgbglow 4s linear infinite;
-      transition: transform 0.3s ease;
-      margin-top: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255,0,128,0.5);
     }
 
-    .rgb-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #fff;
-    }
-
-    @keyframes rgbglow {
-      0% { box-shadow: 0 0 10px #ff0066; }
-      33% { box-shadow: 0 0 10px #6e00ff; }
-      66% { box-shadow: 0 0 10px #00f7ff; }
-      100% { box-shadow: 0 0 10px #ff0066; }
+    .attack-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(255,0,128,0.7);
+      filter: brightness(1.1);
     }
 
     @media (max-width: 600px) {
       .profile-img {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
       }
 
       h1 {
@@ -89,11 +82,41 @@
       .intro-text {
         font-size: 0.95rem;
       }
+    }
 
-      .rgb-btn {
-        font-size: 18px;
-        padding: 12px 20px;
-      }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 0;
+      background-color: #f1f1f1;
+    }
+
+    .wa-link {
+      font-size: 20px;
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-footer {
+      text-decoration: none;
+      color: #E1306C;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-footer:hover {
+      color: #c6285f;
+    }
+
+    .social-link:hover {
+      background-color: #c6285f;
+      transform: scale(1.05);
+    }
+
+    .social-link i {
+      margin-right: 8px;
     }
   </style>
 </head>
@@ -105,13 +128,11 @@
     <!-- Judul -->
     <h1>Welcome to Home Page Johen 👋😊</h1>
 
-    <!-- Teks sambutan -->
+    <!-- Teks sambutan dan tombol -->
     <p class="intro-text">
-      Halo, saya Johen! 👨‍💻🚀
+      Halo, saya Johen! 👨‍💻🚀<br>
+      <a href="ddos.html" class="attack-btn">🔥 Lihat Serangan Johen</a>
     </p>
-
-    <!-- Tombol RGB besar -->
-    <a href="ddos.html" class="rgb-btn">🔥 Lihat Serangan Johen</a>
   </div>
 </body>
 </html>
