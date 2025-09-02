@@ -21,9 +21,12 @@
       margin-top: 20px;
     }
     .top-logo img {
-      width: 60px;
-      height: auto;
-    }
+  width: 120px;     /* lebih gede dikit biar jelas */
+  height: 120px;    /* fix height biar kotak */
+  object-fit: cover; /* biar fotonya nggak gepeng */
+  border-radius: 20px; /* bikin sudut tumpul, bisa diganti 50% kalau mau bulat */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* opsional, kasih bayangan biar estetik */
+}
 
     /* Teks tengah */
     .content {
