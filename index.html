@@ -2,59 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rehann-Website</title>
+  <title>Website-Rehannn</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      background: linear-gradient(135deg, #6a0dad, #9b4dff);
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #6a0dad, #4d6dff);
       font-family: 'Poppins', sans-serif;
       color: white;
       text-align: center;
     }
-    a {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-    }
-    .logo {
-      width: 200px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(255,255,255,0.6);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      animation: pulse 2s infinite;
-    }
-    .logo:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 0 40px rgba(255,255,255,0.9);
-    }
-    .text {
+    /* Logo atas */
+    .top-logo {
       margin-top: 20px;
-      font-size: 22px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      animation: fadeIn 2s ease-in-out infinite alternate;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .top-logo img {
+      width: 60px;
+      height: auto;
     }
-    @keyframes fadeIn {
-      from { opacity: 0.5; }
-      to { opacity: 1; }
+
+    /* Teks tengah */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .content h1 {
+      font-size: 36px;
+      text-shadow: 0 0 12px rgba(255,255,255,0.6);
+      margin-bottom: 20px;
+    }
+    .content a {
+      display: inline-block;
+      padding: 12px 30px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      border-radius: 30px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .content a:hover {
+      background: white;
+      color: #6a0dad;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    }
+
+    /* Logo IG bawah */
+    .footer {
+      margin-bottom: 20px;
+    }
+    .footer img {
+      width: 40px;
+      height: auto;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+    .footer img:hover {
+      opacity: 1;
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <a href="mylove.html">
-    <img src="logo.jpg" alt="Logo" class="logo">
-    <div class="text">Click</div>
-  </a>
+  <!-- Logo kecil atas -->
+  <div class="top-logo">
+    <img src="logo.jpg" alt="Logo">
+  </div>
+
+  <!-- Konten tengah -->
+  <div class="content">
+    <h1>Haii bree</h1>
+    <a href="luvvv.html">Click</a>
+  </div>
+  
+  <!-- IG bawah -->
+  <div class="footer">
+    <a href="https://instagram.com/elmisy" target="_blank">
+      <img src="ig.png" alt="Instagram 1">
+    </a>
+    <a href="https://instagram.com/rehannnnap" target="_blank">
+      <img src="ig.png" alt="Instagram 2">
+    </a>
+  </div>
 </body>
 </html>
