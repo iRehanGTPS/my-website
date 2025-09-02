@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>luvvv</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6a0dad, #4d6dff);
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 36px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .caption {
+      font-size: 18px;
+      font-weight: bold;
+      color: #e0e0ff;
+      text-shadow: 0 0 6px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>hmm, siapaa nihh yaa</h1>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="1.jpg" alt="Foto 1">
+      <div class="caption">💕</div>
+    </div>
+    <div class="card">
+      <img src="2.jpg" alt="Foto 2">
+      <div class="caption">✨</div>
+    </div>
+    <div class="card">
+      <img src="3.jpg" alt="Foto 3">
+      <div class="caption">My favorite💜</div>
+    </div>
+    <div class="card">
+      <img src="4.jpg" alt="Foto 4">
+      <div class="caption">💙</div>
+    </div>
+    <div class="card">
+      <img src="5.jpg" alt="Foto 5">
+      <div class="caption">💞</div>
+    </div>
+    <div class="card">
+      <img src="6.jpg" alt="Foto 6">
+      <div class="caption">💖</div>
+    </div>
+  </div>
+</body>
+</html>
