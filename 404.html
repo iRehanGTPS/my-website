@@ -1,23 +1,71 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>404 - Tidak Ditemukan</title>
-  <style>
-    body {
-      background-color: black;
-      color: red;
-      font-family: monospace;
-      text-align: center;
-      padding-top: 100px;
-    }
-    h1 {
-      font-size: 4rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>403 Forbidden</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box {
+    max-width: 700px;
+    margin: 120px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+h1 {
+    font-size: 72px;
+    color: #d9534f;
+    margin: 0;
+}
+h2 {
+    margin: 10px 0 20px;
+    font-weight: normal;
+}
+p {
+    color: #666;
+}
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #999;
+}
+</style>
 </head>
 <body>
-  <h1>🚫 404 - Akses Ditolak</h1>
-  <p>Halaman ini tidak tersedia di JohenLG Network</p>
+
+<div class="box">
+    <h1>403</h1>
+    <h2>Forbidden</h2>
+    <p>You don't have permission to access this resource.</p>
+    <div class="footer">nginx</div>
+</div>
+
+<script>
+/*
+  Fake .htaccess behavior:
+  Allow ONLY "/" or "/index.html"
+*/
+(function () {
+    const allowed = ["/", "/index.html"];
+    const path = window.location.pathname.toLowerCase();
+
+    if (!allowed.includes(path)) {
+        // stay here → fake 403
+        document.title = "403 Forbidden";
+    } else {
+        // kalau index, redirect beneran
+        window.location.href = "/index.html";
+    }
+})();
+</script>
+
 </body>
 </html>
