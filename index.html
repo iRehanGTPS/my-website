@@ -2,65 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JohenLastGen</title>
+<title>403 Forbidden</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #f3f3f3;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #333;
-    }
-    .container {
-        max-width: 700px;
-        margin: 120px auto;
-        background: #fff;
-        padding: 40px;
-        border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    h1 {
-        font-size: 72px;
-        margin: 0;
-        color: #d9534f;
-    }
-    h2 {
-        margin: 10px 0 20px;
-        font-weight: normal;
-    }
-    p {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #666;
-    }
-    .footer {
-        margin-top: 30px;
-        font-size: 13px;
-        color: #999;
-    }
-    hr {
-        border: none;
-        border-top: 1px solid #eee;
-        margin: 25px 0;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Consolas, monospace;
+}
+body{
+    background: radial-gradient(circle at top, #111, #000);
+    color:#fff;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+.container{
+    text-align:center;
+    animation: fadeIn 1.4s ease;
+}
+h1{
+    font-size:110px;
+    color:#ff4444;
+    animation: glitch 1.5s infinite;
+}
+h2{
+    font-size:26px;
+    margin-bottom:8px;
+    letter-spacing:2px;
+}
+p{
+    font-size:14px;
+    color:#aaa;
+    margin-bottom:22px;
+}
+.links a{
+    text-decoration:none;
+    color:#00ffcc;
+    border:1px solid #00ffcc;
+    padding:10px 18px;
+    margin:0 6px;
+    display:inline-block;
+    transition:0.3s;
+}
+.links a:hover{
+    background:#00ffcc;
+    color:#000;
+    box-shadow:0 0 15px #00ffcc;
+}
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+@keyframes glitch{
+    0%{text-shadow:2px 0 red,-2px 0 cyan;}
+    50%{text-shadow:-2px 0 red,2px 0 cyan;}
+    100%{text-shadow:2px 0 red,-2px 0 cyan;}
+}
+.bg-lines{
+    position:absolute;
+    width:200%;
+    height:200%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 4px
+    );
+    animation: move 20s linear infinite;
+}
+@keyframes move{
+    from{transform:translateY(0);}
+    to{transform:translateY(-50%);}
+}
 </style>
 </head>
 <body>
 
+<div class="bg-lines"></div>
+
 <div class="container">
-    <h1>99999</h1>
-    <h2>Forbidden</h2>
-    <p>You don't have permission to access this resource on this server.</p>
-    <p>The server understood the request but refuses to authorize it.</p>
+    <h1>403</h1>
+    <h2>FORBIDDEN</h2>
+    <p>You don't have permission to access this resource.</p>
 
-    <hr>
-
-    <div class="footer">
-        Server: nginx/1.20.2 (x86_64)
+    <div class="links">
+        <a href="https://t.me/johenlastgen" target="_blank" rel="nofollow noopener">
+            Telegram
+        </a>
+        <a href="https://ahrefs.com" target="_blank" rel="nofollow noopener">
+            ahrefs
+        </a>
     </div>
 </div>
 
 </body>
-</html></html>
+</html>
